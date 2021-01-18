@@ -1,3 +1,4 @@
 ^sprinkles\.Rproj$
 ^\.Rproj\.user$
 ^inst/node_modules$
+^LICENSE\.md$
