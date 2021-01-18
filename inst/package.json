@@ -1,0 +1,24 @@
+{
+  "name": "sprinkles",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "copy:alpine": "cpy 'node_modules/alpinejs/dist/*.js' alpinejs",
+    "minify:alpine": "minify alpinejs/alpine.js > alpinejs/alpine.min.js",
+    "build:tachyons": "tachyons node_modules/tachyons/src/tachyons.css --preserve-variables > tachyons/tachyons.css ",
+    "build:tachyons:min": "tachyons node_modules/tachyons/src/tachyons.css --preserve-variables --minify > tachyons/tachyons.min.css",
+    "build": "npm run copy:alpine && npm run minify:alpine && npm run build:tachyons && npm run build:tachyons:min"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "alpinejs": "^2.8.0",
+    "tachyons": "^4.12.0"
+  },
+  "devDependencies": {
+    "cpy-cli": "^3.1.1",
+    "minify": "^6.0.1",
+    "tachyons-cli": "^1.3.3"
+  }
+}
