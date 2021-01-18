@@ -12,6 +12,13 @@ html_dependency_alpinejs(minified = TRUE, cdn = NULL, version = NULL)
 }
 \arguments{
 \item{minified}{Use the minified Alpine.js file? Default is \code{TRUE}.}
+
+\item{cdn}{The URL to an online location for Alpine.js, typically a CDN.
+Include the URL, without the CSS file, e.g. the full URL minus the
+\code{alpine.js} or \code{alpine.min.js}.}
+
+\item{version}{The version of the Alpine.js resource hosted at the URL in
+\code{cdn}.}
 }
 \value{
 An \code{htmltools::tagList()} with the Alpine.js dependencies, or an

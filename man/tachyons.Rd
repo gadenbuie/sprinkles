@@ -12,6 +12,13 @@ html_dependency_tachyons(minified = TRUE, cdn = NULL, version = NULL)
 }
 \arguments{
 \item{minified}{Use the minified Tachyons css file? Default is \code{TRUE}.}
+
+\item{cdn}{The URL to an online location for Tachyons, typically a CDN.
+Include the URL, without the CSS file, e.g. the full URL minus the
+\code{tachyons.min.css} or \code{tachyons.css}.}
+
+\item{version}{The version of the Tachyons resource hosted at the URL in
+\code{cdn}.}
 }
 \value{
 An \code{htmltools::tagList()} with the tachyons dependencies, or an

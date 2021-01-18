@@ -14,6 +14,9 @@ performed on the color names, and no validation is performed on the
 
 \item{.replace_underscores}{Replace underscores in argument names to turn
 color names like \code{"hot_pink"} to \code{"hot-pink"}.}
+
+\item{.as_text}{If \code{TRUE}, returns the CSS as a character string (does not
+include the \verb{<style>} tag).}
 }
 \description{
 Adds additional utility classes for colors. For each named color, CSS classes

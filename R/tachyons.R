@@ -51,6 +51,11 @@ use_tachyons <- function(minified = TRUE) {
 
 #' @describeIn tachyons Returns an [htmltools::htmlDependency()] with the tile
 #'   view dependencies. Most users will want to use `use_tachyons()`.
+#' @param cdn The URL to an online location for Tachyons, typically a CDN.
+#'   Include the URL, without the CSS file, e.g. the full URL minus the
+#'   `tachyons.min.css` or `tachyons.css`.
+#' @param version The version of the Tachyons resource hosted at the URL in
+#'   `cdn`.
 #' @export
 html_dependency_tachyons <- function(minified = TRUE, cdn = NULL, version = NULL) {
   if (!is.null(cdn) && is.null(version)) {
@@ -140,6 +145,8 @@ formals(style_tachyons) <- args_tachyons_vars()
 #'   [color syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value).
 #' @param .replace_underscores Replace underscores in argument names to turn
 #'   color names like `"hot_pink"` to `"hot-pink"`.
+#' @param .as_text If `TRUE`, returns the CSS as a character string (does not
+#'   include the `<style>` tag).
 #'
 #' @family tachyons
 #' @export

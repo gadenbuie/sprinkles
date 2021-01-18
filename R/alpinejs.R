@@ -21,6 +21,11 @@ use_alpinejs <- function(minified = TRUE) {
 
 #' @describeIn alpinejs Returns an [htmltools::htmlDependency()] with the
 #'   alpinejs dependencies. Most users will want to use `use_alpinejs()`.
+#' @param cdn The URL to an online location for Alpine.js, typically a CDN.
+#'   Include the URL, without the CSS file, e.g. the full URL minus the
+#'   `alpine.js` or `alpine.min.js`.
+#' @param version The version of the Alpine.js resource hosted at the URL in
+#'   `cdn`.
 #' @export
 html_dependency_alpinejs <- function(minified = TRUE, cdn = NULL, version = NULL) {
   if (!is.null(cdn) && is.null(version)) {
