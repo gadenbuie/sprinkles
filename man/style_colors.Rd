@@ -21,8 +21,9 @@ include the \verb{<style>} tag).}
 \description{
 Adds additional utility classes for colors. For each named color, CSS classes
 are added for the foreground color  as \verb{.<color>}, background color as
-\verb{.bg-<color>}, hover classes for both as \verb{.hover-<color>} and
-\verb{.hover-bg-<color>}, and border color as \verb{.b--<color>}.
+\verb{.bg-<color>}, border color as \verb{.b--<color>}, and similar classes for hover
+states for each that starts with the prefix \verb{.hover-} (i.e. \verb{.hover-<color>},
+\verb{.hover-bg-<color}, and \verb{.hover-b--<color>}).
 }
 \seealso{
 Other tachyons: 

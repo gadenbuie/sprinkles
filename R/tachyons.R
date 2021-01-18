@@ -136,8 +136,9 @@ formals(style_tachyons) <- args_tachyons_vars()
 #'
 #' Adds additional utility classes for colors. For each named color, CSS classes
 #' are added for the foreground color  as `.<color>`, background color as
-#' `.bg-<color>`, hover classes for both as `.hover-<color>` and
-#' `.hover-bg-<color>`, and border color as `.b--<color>`.
+#' `.bg-<color>`, border color as `.b--<color>`, and similar classes for hover
+#' states for each that starts with the prefix `.hover-` (i.e. `.hover-<color>`,
+#' `.hover-bg-<color`, and `.hover-b--<color>`).
 #'
 #' @param ... Named colors. The color names need to be acceptable as valid CSS
 #'   classes, in particular they cannot contain periods. Minimal validation is
@@ -182,7 +183,9 @@ style_colors <- function(..., .replace_underscores = TRUE, .as_text = FALSE) {
     ".[x] { color: var(--[x]) }",
     ".bg-[x] { background-color: var(--[x]) }",
     ".b--[x] { border-color: var(--[x]) }",
-    ".hover-[x]:hover, .hover-[x]:focus: { var(--[x]) }",
+    ".hover-[x]:hover, .hover-[x]:focus: { color: var(--[x]) }",
+    ".hover-bg-[x]:hover, .hover-bg-[x]:focus: { background-color: var(--[x]) }",
+    ".hover-b--[x]:hover, .hover-b--[x]:focus: { border-color: var(--[x]) }",
     x = color_names,
     .open = "[",
     .close = "]",
